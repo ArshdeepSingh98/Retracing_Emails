@@ -35,8 +35,8 @@ public class SendEmail {
 		String to = "arshdeep.mailme@gmail.com";
 		String from = "arshdeep.mailme@gmail.com";
 		
-		final String username = "arshdeep.mailme@gmail.com";
-		final String password = "118198DEEP";
+		final String username = "email";
+		final String password = "pass";
 	    
 		String host = "smtp.gmail.com";
 	    
