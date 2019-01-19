@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Tracker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <img src="TImage.jpg" />AppleImage.gif<img />
+    <script>
+      let urlstring = window.location.href;
+      console.log(urlstring);
+      var url = new URL(urlstring);
+
+      const email = url.searchParams.get("email");
+      const cid = url.searchParams.get("cid");
+      const date = url.searchParams.get("date");
+      const time = url.searchParams.get("time");
+      console.log("Email : " + email);
+
+      var emailUser = {
+        email: email,
+        cid: cid,
+        date: date,
+        time: time
+      };
+
+      $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/users",
+        dataType: "json",
+        data: JSON.stringify(emailUser),
+        contentType: "application/json; charset=utf-8",
+        success: function() {
+          console.log("POST successful");
+        }
+      });
+    </script>
+  </body>
+</html>
