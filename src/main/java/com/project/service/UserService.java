@@ -23,7 +23,13 @@ public class UserService {
 	}
 	
 	public User getUser(String email) {
-		return users.stream().filter(t -> t.getEmail().equals(email)).findFirst().get();
+		for(User u : userRespository.findAll()) {
+			if(u.getEmail().equals(email)){
+				return u;
+			}
+		}
+		return new User("null", "null", "null", "null");
+//		return users.stream().filter(t -> t.getEmail().equals(email)).findFirst().get();
 	}
 	
 	public void addUser(User user) {
