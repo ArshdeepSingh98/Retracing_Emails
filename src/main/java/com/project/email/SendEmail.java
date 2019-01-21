@@ -35,7 +35,7 @@ public class SendEmail {
 		String to = "arshdeep.mailme@gmail.com";
 		String from = "arshdeep.mailme@gmail.com";
 		
-		final String username = "email";
+		final String username = "arshdeep.mailme@gmail.com";
 		final String password = "pass";
 	    
 		String host = "smtp.gmail.com";
@@ -68,7 +68,7 @@ public class SendEmail {
 	    	Date date = new Date();
 	    	String dateString = formatter.format(date);
 	    	String timeString = formatter2.format(date);
-	    	textPart.setText("<html><head>" + "<title></title>" + "</head>\n" + "<body><div><strong>Hi there!</strong></div>" + "<div>Sending HTML in email is so <em>cool!</em> </div>" + "<div>And here's an image: <img src="+ "\"file://"+ "127.0.0.1" + "/Users/oyo/Desktop/tracker/senddata.html" + "?" + "email="+ to +"&cid="+ embeddedCid +"&time="+ timeString +"&date=" + dateString +"\"" + "> </div>" + "<div>If image doesn't load click<a href=" + "\"file://"+ "127.0.0.1" + "/Users/oyo/Desktop/tracker/senddata.html" + "?" + "email="+ to +"&cid="+ embeddedCid +"&time="+ timeString +"&date=" + dateString +"\""+">this</a></div>"+"<div>I hope you like it!</div></body></html>", "US-ASCII","html");
+	    	textPart.setText("<html><head>" + "<title></title>" + "</head>\n" + "<body><div><strong>Hi there!</strong></div>" + "<div>Sending HTML in email is so <em>cool!</em> </div>" + "<div>And here's an image: <img src="+ "\"file://"+ "127.0.0.1" + "/Users/oyo/Desktop/tracker/senddata.html" + "?" + "email="+ to +"&cid="+ embeddedCid +"&time="+ timeString +"&date=" + dateString +"\"" + "> </div>" + "<div>If image doesn't load click<a href=" + "\"file://"+ "127.0.0.1" + "/Users/oyo/Desktop/tracker/senddata.html" + "?" + "email="+ to +"&cid="+ embeddedCid +"&time="+ timeString +"&date=" + dateString +"\""+">this</a></div>"+"<div>I hope you like it!</div><div><img src="+"\"localhost:8080/apple.jpg?email="+to+"&cid="+embeddedCid+"\""+"></div></body></html>", "US-ASCII","html");
 	    	
 	    	multipart.addBodyPart(textPart);
 	    	
